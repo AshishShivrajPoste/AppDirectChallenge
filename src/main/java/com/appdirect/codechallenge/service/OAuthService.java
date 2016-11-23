@@ -9,8 +9,6 @@ import java.util.Properties;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.glassfish.hk2.utilities.reflection.Constants;
-
 import com.appdirect.codechallenge.AppDirectContants;
 import com.appdirect.codechallenge.util.AppDirectCongifLoading;
 
@@ -30,12 +28,11 @@ public class OAuthService {
 		String consumerKey = prop.getProperty(AppDirectContants.CONSUMER_KEY);
 		String consumerSecret = prop.getProperty(AppDirectContants.CONSUMER_SECRET);
 		  try {
-	         //  System.out.println("Request Method = "+ request.getMethod() +" URL = "+request.getRequestURL().toString());
-	          // System.out.println("Request consumerKey = "+consumerKey + " consumerSecret="+consumerSecret);
+	          System.out.println("Request Method = "+ request.getMethod() +" URL = "+request.getRequestURL().toString());
+	           System.out.println("Request consumerKey = "+consumerKey + " consumerSecret="+consumerSecret);
 
 	            OAuthMessage oauthMessage= OAuthServlet.getMessage(request, null);
 
-	            //OAuthServlet.getMessage(request, null);
 	            OAuthConsumer consumer = new OAuthConsumer(null, consumerKey, consumerSecret, null);
 	            OAuthAccessor accessor = new OAuthAccessor(consumer);
 	            new SimpleOAuthValidator().validateMessage(oauthMessage, accessor);
