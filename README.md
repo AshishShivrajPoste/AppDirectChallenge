@@ -1,6 +1,12 @@
 # AppDirectCodingChallenge
 Coding Challenge of AppDirect
 
+The Application is hosted on AWS and can be found at below url
+
+http://myfirstelasticbeans-env12345.us-east-1.elasticbeanstalk.com/
+
+Alternate way to run the application is as below 
+
 
 #Instalation
 
@@ -28,7 +34,35 @@ Please change the consumerKey and consumerSecret in config.properties file under
 
 # AppDirect Event Notification URL configured
 
-As I am using ngrok for tunnelling please update the URL accordinglly.
+AWS hosted Application has below urls
+
+Subscription Create Notification URL
+
+http://myfirstelasticbeans-env12345.us-east-1.elasticbeanstalk.com/webapi/subscription/create?url={eventUrl}
+
+Subscription Change Notification URL
+
+http://myfirstelasticbeans-env12345.us-east-1.elasticbeanstalk.com/webapi/subscription/change?url={eventUrl}
+
+Subscription Cancel Notification URL
+
+http://myfirstelasticbeans-env12345.us-east-1.elasticbeanstalk.com/webapi/subscription/cancel?url={eventUrl}
+
+Subscription Status Notification URL
+
+http://myfirstelasticbeans-env12345.us-east-1.elasticbeanstalk.com/webapi/subscription/status?url={eventUrl}
+
+User Assignment Notification URL
+
+http://myfirstelasticbeans-env12345.us-east-1.elasticbeanstalk.com/webapi/user/assign?url={eventUrl}
+
+User Unassignment Notification URL
+
+http://myfirstelasticbeans-env12345.us-east-1.elasticbeanstalk.com/webapi/user/unassign?url={eventUrl}
+
+
+
+You can change the below url if you are using local deployment on tomcat along with ngrok tunneling.
 
 Subscription Create Notification URL
 
